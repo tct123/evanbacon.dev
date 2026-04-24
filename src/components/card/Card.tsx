@@ -13,7 +13,7 @@ const upperFlow = 16;
 const ICON_SIZE = 72;
 
 function isMobileSafari() {
-  var userAgent = window.navigator.userAgent;
+  let userAgent = window.navigator.userAgent;
 
   return !!(userAgent.match(/iPad/i) || userAgent.match(/iPhone/i));
 }

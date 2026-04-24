@@ -11,6 +11,12 @@ import { StyleNoSelect } from './no-select';
 import classNames from 'classnames';
 import { H3, P, Span } from '@expo/html-elements';
 
+import * as WebBrowser from 'expo-web-browser';
+import { TouchableImpact } from './ui/TouchableImpact';
+import { useScrollRef, useScrollToTop } from '@/hooks/useTabToTop';
+import { useRef, useEffect } from 'react';
+import { useBottomTabOverflow } from './ui/TabBarBackground';
+
 export default function GamesRoute() {
   const paddingBottom = useBottomTabOverflow();
   const ref = useRef(null);
@@ -88,12 +94,6 @@ export default function GamesRoute() {
     </ScrollView>
   );
 }
-
-import * as WebBrowser from 'expo-web-browser';
-import { TouchableImpact } from './ui/TouchableImpact';
-import { useScrollRef, useScrollToTop } from '@/hooks/useTabToTop';
-import { useRef, useEffect } from 'react';
-import { useBottomTabOverflow } from './ui/TabBarBackground';
 
 function LoopingVideo({ source }: { source: any; style?: any }) {
   if (process.env.EXPO_OS === 'web') {

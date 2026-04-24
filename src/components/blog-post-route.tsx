@@ -6,9 +6,9 @@ import classNames from 'classnames';
 import React from 'react';
 import { ScrollView, Text } from 'react-native';
 
-const mdxctx = require.context('../../blog', true, /\.(mdx|js)$/);
-
 import '../../global.css';
+
+const mdxctx = require.context('../../blog', true, /\.(mdx|js)$/);
 
 type PostInfo = {
   tags: string[];

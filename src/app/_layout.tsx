@@ -17,6 +17,12 @@ import { HapticTab } from '@/components/HapticTab';
 import * as QuickActions from 'expo-quick-actions';
 import { RouterAction } from 'expo-quick-actions/router';
 
+import { ThemeProvider, DarkTheme } from '@react-navigation/native';
+import { IconSymbol } from '@/components/ui/IconSymbol';
+import BlurTabBarBackground from '@/components/ui/TabBarBackground.ios';
+
+import * as AppleColors from '@bacons/apple-colors';
+
 QuickActions.setItems<RouterAction>([
   {
     id: '1',
@@ -143,12 +149,6 @@ function CustomHead() {
     </Head>
   );
 }
-
-import { ThemeProvider, DarkTheme } from '@react-navigation/native';
-import { IconSymbol } from '@/components/ui/IconSymbol';
-import BlurTabBarBackground from '@/components/ui/TabBarBackground.ios';
-
-import * as AppleColors from '@bacons/apple-colors';
 
 export default function App() {
   loadAsync({
